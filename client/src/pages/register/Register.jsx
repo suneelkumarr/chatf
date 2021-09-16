@@ -36,57 +36,70 @@ const Register = () => {
         }
     }
     return (
+      <div className="help">
         <div className="login">
-      <div className="loginWrapper">
-        <div className="loginLeft">
-          <h3 className="loginLogo">Chat</h3>
-          <span className="loginDesc">
-            Connect with friends and the world around you on Chat web.
-          </span>
-        </div>
-        <div className="loginRight">
-          <form className="loginBox" onSubmit={handleClick}>
-            <input
-              placeholder="Username"
-              required
-              ref={username}
-              className="loginInput"
-            />
-            <input
-              placeholder="name"
-              required
-              ref={name}
-              className="loginInput"
-            />
-            <input
-              placeholder="Email"
-              required
-              ref={email}
-              className="loginInput"
-              type="email"
-            />
-            <input
-              placeholder="Password"
-              required
-              ref={password}
-              className="loginInput"
-              type="password"
-              minLength="6"
-            />
-            <input
-              placeholder="Password Again"
-              required
-              ref={passwordAgain}
-              className="loginInput"
-              type="password"
-            />
-            <button className="loginButton" type="submit">
-              Sign Up
-            </button>
-            <button className="loginRegisterButton">Log into Account</button>
+          <div className="container">
+            <div className="login-box">
+              <h2>Register</h2>
+            <form onSubmit={handleClick}>
+              <div className="user-box">
+                <input
+                  required
+                  ref={username}
+                />
+                <label>Username</label>
+              </div>
+              <div className="user-box">
+              <input
+                required
+                ref={name}
+              />
+              <label>Name</label>
+              </div>
+              <div className="user-box">
+              <input
+                required
+                ref={email}
+                type="email"
+              />
+              <label>Email</label>
+              </div>
+              <div className="user-box">
+              <input
+                required
+                ref={password}
+                type="password"
+                minLength="6"
+              />
+              <label>Password</label>
+              </div>
+              <div className="user-box">
+              <input
+                required
+                ref={passwordAgain}
+                type="password"
+                minLength="6"
+              />
+                <label>passwordAgain</label>
+              </div>
+             <a style={{marginRight:"28px"}}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Register
+              </a>
+              <a>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Login
+              </a>
           </form>
         </div>
       </div>
+    </div>
     </div>
     );
 }

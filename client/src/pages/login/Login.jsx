@@ -17,50 +17,69 @@ const Login = () => {
     );
   };
     return (
-        <div className="login">
-        <div className="loginWrapper">
-          <div className="loginLeft">
-            <h3 className="loginLogo">Chat</h3>
-            <span className="loginDesc">
-              Connect with friends and the world around you on Chat.
-            </span>
-          </div>
-          <div className="loginRight">
-            <form className="loginBox" onSubmit={handleClick}>
-              <input
-                placeholder="Email"
-                type="email"
-                required
-                className="loginInput"
-                ref={email}
-              />
-              <input
-                placeholder="Password"
-                type="password"
-                required
-                minLength="6"
-                className="loginInput"
-                ref={password}
-              />
-              <button className="loginButton" type="submit" disabled={isFetching}>
+      <div className="help">
+      <div className="login">
+      <div className="container">
+        <div className="login-box">
+          <h2>Login</h2>
+            <form onSubmit={handleClick}>
+              <div className="user-box">
+               <input
+                 type="email"
+                 required
+                 className="loginInput"
+                 ref={email}
+               />
+               <label>Email</label>
+              </div>
+              <div class="user-box">
+                <input
+                  type="password"
+                  required
+                  minLength="6"
+                  className="loginInput"
+                  ref={password}
+                />
+                <label>Password</label>
+              </div>
+              <a  disabled={isFetching} >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 {isFetching ? (
                   <CircularProgress color="white" size="20px" />
                 ) : (
-                  "Log In"
+                  "Forgot Password"
                 )}
-              </button>
-              <span className="loginForgot">Forgot Password?</span>
-              <button className="loginRegisterButton">
+              </a>
+              <a  disabled={isFetching} style={{marginRight:"28px"}} >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
                 {isFetching ? (
                   <CircularProgress color="white" size="20px" />
                 ) : (
-                  "Create a New Account"
+                  "Login"
                 )}
-              </button>
+              </a>
+               <a  disabled={isFetching} >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                {isFetching ? (
+                  <CircularProgress color="white" size="20px" />
+                ) : (
+                  "Signup"
+                )}
+              </a>
             </form>
           </div>
-        </div>
-      </div>
+          </div>
+          </div>
+          </div>
     );
 }
 
