@@ -82,14 +82,14 @@ const Register = () => {
               />
                 <label>passwordAgain</label>
               </div>
-             <a style={{marginRight:"28px"}}>
+             <a style={{marginRight:"28px"}} type="button" >
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Register
               </a>
-              <a>
+              <a type="button">
                 <span></span>
                 <span></span>
                 <span></span>
